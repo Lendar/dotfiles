@@ -1,0 +1,5 @@
+base:
+  '*':
+    - dotfiles
+    - avocado
+    - android
