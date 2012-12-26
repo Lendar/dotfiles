@@ -19,11 +19,6 @@ avocado-npm:
   cmd.run:
     - name: 'npm install --silent -g grunt coffee-script clientjade'
     - cwd: {{grains['home']}}
-pow:
-  cmd.run:
-    - name: 'curl get.pow.cx | sh'
-    - cwd: {{grains['home']}}
-    - unless: 'return 0'
 {{grains['home']}}/.pow/localhost.iknow:
   file.append:
     - text: '3000'
@@ -36,6 +31,3 @@ pow:
   file.touch:
     - watch:
       - file: {{grains['home']}}/.powconfig
-/etc/hosts:
-  file.append:
-    - text: '127.0.0.1 localhost.iknow.travel'
