@@ -34,6 +34,7 @@ Settings
 
 4. Open "Date & Time". Setup Clock.
 
+5. Open "Accessibility". Switch to "Zoom". Enable "Use scroll gesture".
 
 DNS
 ---
