@@ -39,12 +39,16 @@ Settings
 DNS
 ---
 
-1. Set comp uter name to "%username% MacBook".
+1. Run in Terminal:
+
+```
+sudo scutil --set LocalHostName "lendar-macbook"
+```
 
 2. Run in Terminal:
 
 ```
-    curl get.pow.cx | sh
+curl get.pow.cx | sh
 ```
 
 3. Append to /etc/hosts: `127.0.0.1 localhost.iknow.travel`
