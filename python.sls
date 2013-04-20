@@ -1,0 +1,3 @@
+virtualenv:
+  pip:
+    - installed
