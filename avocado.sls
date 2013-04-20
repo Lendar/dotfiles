@@ -17,7 +17,7 @@ graphicsmagick:
   pkg.installed
 avocado-npm:
   cmd.run:
-    - name: 'npm install --silent -g grunt coffee-script clientjade'
+    - name: 'npm install --silent -g grunt-cli coffee-script'
     - cwd: {{grains['home']}}
 {{grains['home']}}/.pow/localhost.iknow:
   file.append:
