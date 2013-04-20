@@ -11,6 +11,7 @@ PATH=/usr/local/bin:$PATH
 brew install swig
 pip install M2Crypto PyCrypto
 
+pip install esky bbfreeze
 pip install msgpack-python pyzmq PyYAML jinja2
 
 brew install saltsack
