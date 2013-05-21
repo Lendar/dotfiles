@@ -2,8 +2,8 @@ encfs:
   pkg:
     - installed
 {{grains['home']}}/.profile:
-  file.symlink:
-    - target: {{grains['home']}}/Dropbox/.home/.profile
+  file.managed:
+    - source: salt://dotfiles/profile.sh
 {{grains['home']}}/.ssh/config:
   file.symlink:
     - target: {{grains['home']}}/Dropbox/.home/.ssh/config

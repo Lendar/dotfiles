@@ -1,6 +1,7 @@
 base:
   '*':
     - dotfiles
+    - projects
   '*-lendar':
     - apps.chrome
     - apps.sublime
