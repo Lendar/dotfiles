@@ -19,3 +19,6 @@ encfs:
   file.symlink:
     - target: /Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl
     - makedirs: true
+"{{grains['home']}}/Library/Keyboard Layouts":
+  file.recurse:
+    - source: "salt://dotfiles/Keyboard Layouts"
