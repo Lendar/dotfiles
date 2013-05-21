@@ -1,6 +1,7 @@
 base:
   '*':
     - dotfiles
+  '*-lendar':
     - apps.chrome
     - apps.sublime
     - apps.alfred
@@ -8,3 +9,7 @@ base:
     - avocado
     - android
     - python
+  'constellation-vafelman':
+    - avocado
+  'defiant-vafelman':
+    - avocado
