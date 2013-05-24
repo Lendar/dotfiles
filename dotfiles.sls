@@ -22,3 +22,10 @@ encfs:
 "{{grains['home']}}/Library/Keyboard Layouts":
   file.recurse:
     - source: "salt://dotfiles/Keyboard Layouts"
+zsh:
+  git.latest:
+    - name: git://github.com/robbyrussell/oh-my-zsh.git
+    - target: {{grains['home']}}/.oh-my-zsh
+  file.managed:
+    - name: {{grains['home']}}/.zshrc
+    - source: salt://dotfiles/zshrc.zsh
