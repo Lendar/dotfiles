@@ -59,3 +59,10 @@ function project() {
     cd ~/projects/$1
     source ~/env/$1.zsh
 }
+if type compdef &>/dev/null; then
+    # ZSH-only
+    _project_complete() {
+        compadd `ls ~/projects`
+    }
+    compdef _project_complete project
+fi
