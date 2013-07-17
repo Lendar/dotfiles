@@ -7,6 +7,7 @@ base:
     - apps.sublime
     - apps.alfred
     - apps.dropbox
+    - apps.iterm2
     - avocado
     - android
     - python
