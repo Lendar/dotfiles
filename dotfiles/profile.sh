@@ -34,7 +34,7 @@ alias ...="cd ../.."
 
 git config --global branch.autosetuprebase always
 git config --global branch.master.rebase true
-git config --global push.default tracking
+git config --global push.default current
 git config --global color.ui true
 source ~/config-git.sh
 
