@@ -31,3 +31,8 @@ zsh:
   file.managed:
     - name: {{grains['home']}}/.zshrc
     - source: salt://dotfiles/zshrc.zsh
+sublime-config:
+  file.symlink:
+    - name: {{grains['home']}}/Library/Application Support/Sublime Text 2/Packages/User
+    - target: {{grains['home']}}/Dropbox/Library/Application Support/Sublime Text 2/Packages/User
+    - makedirs: true
