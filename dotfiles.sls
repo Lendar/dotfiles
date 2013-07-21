@@ -36,3 +36,7 @@ sublime-config:
     - name: {{grains['home']}}/Library/Application Support/Sublime Text 2/Packages/User
     - target: {{grains['home']}}/Dropbox/Library/Application Support/Sublime Text 2/Packages/User
     - makedirs: true
+osx-defaults-script:
+  cmd.script:
+    - source: salt://osx/defaults.sh
+

@@ -1,6 +1,20 @@
 Steps
 =====
 
+Getting started
+---------------
+
+```
+osx/bootstrap.sh
+```
+
+ZSH
+---
+
+```
+chsh -s /bin/zsh
+```
+
 GUI Installer
 -----------------
 
