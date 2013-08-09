@@ -59,6 +59,20 @@ function project() {
     cd ~/projects/$1
     source ~/env/$1.zsh
 }
+function task() {
+    taskid=$1
+    # set -ex
+    git fetch
+    name=`git branch -a | sed -e s/\\*//g | grep $taskid | tr -d ' ' | head -n1`
+    name=${name/remotes\/origin\/}
+    echo "git checkout -t origin/$name || git checkout $name"
+    git checkout -t origin/$name || git checkout $name
+    git rebase
+    npm install
+    bower install
+    grunt server
+}
+
 if type compdef &>/dev/null; then
     # ZSH-only
     _project_complete() {
