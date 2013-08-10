@@ -4,6 +4,9 @@ encfs:
 {{grains['home']}}/.profile:
   file.managed:
     - source: salt://dotfiles/profile.sh
+{{grains['home']}}/.gemrc:
+  file.managed:
+    - source: salt://dotfiles/gemrc
 {{grains['home']}}/.ssh/config:
   file.symlink:
     - target: {{grains['home']}}/Dropbox/.home/.ssh/config
