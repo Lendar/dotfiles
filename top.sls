@@ -4,6 +4,7 @@ base:
     - projects
   '*-lendar':
     - apps.chrome
+    - apps.chrome-canary
     - apps.sublime
     - apps.alfred
     - apps.dropbox
@@ -12,6 +13,9 @@ base:
     - android
     - python
   'constellation-vafelman':
+    - apps.iterm2
+    - apps.alfred
+    - apps.chrome-canary
     - avocado
   'defiant-vafelman':
     - avocado
