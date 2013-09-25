@@ -1,9 +1,8 @@
-if [ -d /Applications/Alfred.app ]; then
+if [ -d "/Applications/Alfred 2.app" ]; then
     echo "Already installed!"
     exit 0
 fi
-binary_name="alfred_1.3.1_261.dmg"
+binary_name="Alfred_2.0.8_212.zip"
 binary_url="http://cachefly.alfredapp.com/$binary_name"
 curl -qLO $binary_url
-hdiutil mount $binary_name
-cp -R '/Volumes/Alfred.app/Alfred.app' /Applications
+unzip $binary_name -d /Applications
