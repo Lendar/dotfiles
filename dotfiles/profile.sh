@@ -1,4 +1,5 @@
 export PATH=/usr/local/share/python:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:~/node_modules/.bin:/usr/local/share/npm/bin:~/bin:$PATH
+export PATH=$(brew --prefix ruby)/bin:$PATH
 export HISTCONTROL=ignoreboth
 export HISTSIZE=50000
 export HISTIGNORE="&:l:vdir:[bf]g:exit"
@@ -63,6 +64,19 @@ function project() {
         source $env_script
     fi
 }
+function archive-project() {
+    project $1
+    git fetch
+    git bundle create ../$project.git.bundle --all
+    zip ~/secure/archive/$project.git.bundle.zip ../$project.git.bundle
+}
+function test-release() {
+    npm install &&
+    bower install &&
+    grunt test &&
+    npm test &&
+    npm start
+}
 function task() {
     taskid=$1
     # set -ex
@@ -87,6 +101,7 @@ if type compdef &>/dev/null; then
         compadd `ls ~/projects`
     }
     compdef _project_complete project
+    compdef _project_complete archive-project
 fi
 
 doge
