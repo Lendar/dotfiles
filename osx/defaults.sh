@@ -36,6 +36,10 @@ defaults write com.apple.finder FXPreferredViewStyle Nlsv
 # Allow text selection in Quick Look
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
+# Change new window path to ~
+# Set this to open to the home directory, not "All My Files", if you want All My Files though it's PfAF
+defaults write com.apple.finder NewWindowTarget PfHm
+
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
