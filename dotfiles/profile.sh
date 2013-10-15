@@ -4,7 +4,7 @@ export HISTSIZE=50000
 export HISTIGNORE="&:l:vdir:[bf]g:exit"
 export NODE_PATH=/usr/local/bin:$NODE_PATH
 #FSHARP_COMPILER_BIN="/Library/Frameworks/Mono.framework/Versions/Current/lib/fsharp/bin"
-export PYTHONPATH=/usr/bin/:$(brew --prefix)/lib/python2.7/site-packages:/usr/local/lib/python:$PYTHONPATH
+export PYTHONPATH=/usr/bin/:/usr/local/lib/python2.7/site-packages:/usr/local/lib/python:$PYTHONPATH
 
 export EDITOR='subl -w'
 # export EDITOR="open -a /Applications/Emacs.app";export EDITOR
@@ -31,12 +31,6 @@ export EC2_HOME=/usr/local
 alias ..="cd .."
 alias ...="cd ../.."
 # TODO: export PS1="\u@\h:\w\n$ "
-
-git config --global branch.autosetuprebase always
-git config --global branch.master.rebase true
-git config --global push.default current
-git config --global color.ui true
-source ~/config-git.sh
 
 alias nginx='sudo killall nginx && sudo launchctl load -w /Library/LaunchAgents/org.nginx.plist'
 alias edit-nginx='subl $nginx_conf'

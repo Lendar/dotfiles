@@ -7,6 +7,10 @@ encfs:
 {{grains['home']}}/.gemrc:
   file.managed:
     - source: salt://dotfiles/gemrc
+{{grains['home']}}/.gitconfig:
+  file.managed:
+    - source: salt://dotfiles/gitconfig
+    - template: jinja
 {{grains['home']}}/.npmrc:
   file.managed:
     - source: salt://dotfiles/npmrc
