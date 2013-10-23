@@ -43,6 +43,9 @@ defaults write com.apple.finder NewWindowTarget PfHm
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
+# Use current directory as default search scope
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
