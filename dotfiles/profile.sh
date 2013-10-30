@@ -56,14 +56,18 @@ function project() {
 function task() {
     taskid=$1
     # set -ex
-    git fetch
-    name=`git branch -a | sed -e s/\\*//g | grep $taskid | tr -d ' ' | head -n1`
-    name=${name/remotes\/origin\/}
-    echo "git checkout -t origin/$name || git checkout $name"
-    git checkout -t origin/$name || git checkout $name
+    git fetch &&
+    name=`git branch -a | sed -e s/\\*//g | grep $taskid | tr -d ' ' | head -n1` &&
+    name=${name/remotes\/origin\/} &&
+    echo "git checkout -t origin/$name || git checkout $name" &&
+    git branch --set-upstream $name origin/$name &&
+    (git checkout -t origin/$name || git checkout $name) &&
+    new_commits=$(git rev-list ^HEAD @{upstream} | wc -l)
     git rebase
-    npm install
-    bower install
+    if [[ new_commits -ne 0 ]]; then
+        npm install --quiet
+        bower install
+    fi
     grunt server
 }
 
