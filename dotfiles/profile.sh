@@ -50,6 +50,9 @@ alias salt="salt -c ~/.salt"
 
 # projects
 function project() {
+    export HISTFILE=~/.history-$1
+    touch $HISTFILE
+    fc -R
     cd ~/projects/$1
     source ~/env/$1.zsh
 }
