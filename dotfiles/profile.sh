@@ -78,3 +78,5 @@ if type compdef &>/dev/null; then
     }
     compdef _project_complete project
 fi
+
+doge
