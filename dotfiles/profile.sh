@@ -50,11 +50,18 @@ alias salt="salt -c ~/.salt"
 
 # projects
 function project() {
+    source ~/projects/salt/iterm2_helpers.sh
+    export DISABLE_AUTO_TITLE="true"
+    tab_green "🐔 $1"
     export HISTFILE=~/.history-$1
     touch $HISTFILE
     fc -R
     cd ~/projects/$1
-    source ~/env/$1.zsh
+    export project="$1"
+    env_script="$HOME/env/$1.zsh"
+    if [[ -f "$env_script" && -r "$env_script" ]]; then
+        source $env_script
+    fi
 }
 function task() {
     taskid=$1
