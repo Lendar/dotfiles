@@ -1,3 +1,0 @@
-android-sdk:
-  pkg:
-    - installed

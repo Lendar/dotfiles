@@ -10,7 +10,6 @@ base:
     - apps.dropbox
     - apps.iterm2
     - avocado
-    - android
     - python
   'constellation-vafelman':
     - apps.iterm2
