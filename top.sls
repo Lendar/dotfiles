@@ -2,7 +2,8 @@ base:
   '*':
     - dotfiles
     - projects
-  '*-lendar':
+  primary:
+    - match: nodegroup
     - apps.chrome
     - apps.chrome-canary
     - apps.sublime
@@ -11,10 +12,3 @@ base:
     - apps.iterm2
     - avocado
     - python
-  'constellation-vafelman':
-    - apps.iterm2
-    - apps.alfred
-    - apps.chrome-canary
-    - avocado
-  'defiant-vafelman':
-    - avocado
