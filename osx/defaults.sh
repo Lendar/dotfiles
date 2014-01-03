@@ -7,8 +7,10 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
-# Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
+# Set a blazingly fast keyboard repeat rate. N.B.: KeyRemap4MacBook overrides both.
+# 1 = 15 ms, minimal value is 1
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 4
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
