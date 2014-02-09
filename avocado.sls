@@ -1,6 +1,5 @@
-nodejs:
-  pkg:
-    - installed
+include:
+  - nodejs
 redis:
   pkg:
     - installed
@@ -15,10 +14,6 @@ boto:
   pip.installed
 graphicsmagick:
   pkg.installed
-avocado-npm:
-  cmd.run:
-    - name: 'npm install --silent -g grunt-cli coffee-script bower'
-    - cwd: {{grains['home']}}
 {{grains['home']}}/.pow/localhost.iknow:
   file.append:
     - text: '3000'
