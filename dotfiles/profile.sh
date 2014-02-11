@@ -6,6 +6,9 @@ export NODE_PATH=/usr/local/bin:$NODE_PATH
 #FSHARP_COMPILER_BIN="/Library/Frameworks/Mono.framework/Versions/Current/lib/fsharp/bin"
 export PYTHONPATH=/usr/bin/:/usr/local/lib/python2.7/site-packages:/usr/local/lib/python:$PYTHONPATH
 
+# Set pbcopy to use UTF-8 by default
+export __CF_USER_TEXT_ENCODING=0x1F5:0x8000100:0x8000100
+
 export EDITOR='subl -w'
 # export EDITOR="open -a /Applications/Emacs.app";export EDITOR
 
