@@ -24,6 +24,8 @@
     trustExitCode = true
 [push]
     default = current
+[rebase]
+    autosquash = true
 [user]
     name = {{ pillar['name'] }}
     email = {{ pillar['email'] }}
