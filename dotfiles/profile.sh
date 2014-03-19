@@ -84,6 +84,14 @@ function task() {
     grunt server
 }
 
+function archive-project() {
+    project $1
+    echo "Warning: remote branches are ignored."
+    git fetch
+    git bundle create ../$project.git.bundle --all
+    zip ~/secure/archive/$project.git.bundle.zip ../$project.git.bundle
+}
+
 if type compdef &>/dev/null; then
     # ZSH-only
     _project_complete() {
