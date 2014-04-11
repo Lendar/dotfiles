@@ -2,7 +2,7 @@ export PATH=/usr/local/share/python:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/
 export HISTCONTROL=ignoreboth
 export HISTSIZE=50000
 export HISTIGNORE="&:l:vdir:[bf]g:exit"
-export NODE_PATH=/usr/local/bin:$NODE_PATH
+export NODE_PATH=/usr/local/bin:/usr/local/share/npm/lib/node_modules:$NODE_PATH
 #FSHARP_COMPILER_BIN="/Library/Frameworks/Mono.framework/Versions/Current/lib/fsharp/bin"
 export PYTHONPATH=/usr/bin/:/usr/local/lib/python2.7/site-packages:/usr/local/lib/python:$PYTHONPATH
 
