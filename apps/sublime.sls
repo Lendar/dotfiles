@@ -3,20 +3,19 @@ salt://apps/sublime.sh:
     - script
     - cwd: {{grains['home']}}
 
-{% set packages = [
-  'Lendar/sublime-projects',
-  'Lendar/sublime-js2coffee#fix-paths',
-  'jashkenas/coffee-script-tmbundle'
-] %}
+{% set packages = {
+  'Projects': 'Lendar/sublime-projects',
+  'Js2coffee': 'Lendar/sublime-js2coffee#fix-paths',
+  'CoffeeScript': 'jashkenas/coffee-script-tmbundle'
+} %}
 
-{% for package_spec in packages %}
+{% for name, package_spec in packages.items() %}
 {% set package = package_spec.split('#')[0] %}
 {% if '#' in package_spec %}
   {% set rev = package_spec.split('#')[1] %}
 {% else %}
   {% set rev = 'master' %}
 {% endif %}
-{% set name = package.split('/')[1] %}
 sublime-{{name}}:
   git.latest:
     - name: git://github.com/{{package}}.git
