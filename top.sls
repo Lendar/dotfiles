@@ -12,3 +12,4 @@ base:
     - apps.iterm2
     - avocado
     - python
+    - plist

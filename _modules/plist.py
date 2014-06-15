@@ -14,8 +14,7 @@ def plutil_bin2xml(src, format):
     dest = '-' # stdout
     args = ['plutil', '-convert', format, '-o', dest, '--', src]
     cmd = ' '.join(args)
-    # run_stdout
-    ret = __salt__['cmd.run'](cmd)
+    ret = __salt__['cmd.run_stdout'](cmd, output_loglevel='quiet')
     return ret
 
 
@@ -23,7 +22,6 @@ def plutil_xml2bin(dest, format, raw_plist):
     src = '-' # stdin
     args = ['plutil', '-convert', format, '-o', dest, '--', src]
     cmd = ' '.join(args)
-    # run_stdout
     ret = __salt__['cmd.run'](cmd, stdin=raw_plist)
     return ret
 
@@ -61,5 +59,4 @@ def dump(contents, filename):
     filename = _normalize_path(filename)
     raw_plist = dump_xml(contents)
     plutil_xml2bin(filename, 'binary1', raw_plist)
-
-
+    return True
