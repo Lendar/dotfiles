@@ -2,6 +2,7 @@ base:
   '*':
     - dotfiles
     - projects
+    - plist
   primary:
     - match: nodegroup
     - apps.chrome
@@ -12,4 +13,3 @@ base:
     - apps.iterm2
     - avocado
     - python
-    - plist

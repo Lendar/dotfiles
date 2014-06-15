@@ -1,5 +1,18 @@
 disable-mission-control-hotkeys:
-  module.run:
-    - name: plist_hotkeys.disable_hotkey
-    - kwargs:
-      hotkey_id: 79
+  plist_hotkeys.disable_hotkey:
+    - names:
+      - '32'
+      - '33'
+      - '34'
+      - '35'
+      - '36'
+      - '37'
+      - '62'
+      - '63'
+      - '79'
+      - '80'
+      - '81'
+      - '82'
+      - '118'
+      - '119'
+      - '120'
