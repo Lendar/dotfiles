@@ -18,5 +18,5 @@ def disable_hotkey(name):
         return ret
     except Exception as e:
         ret['result'] = False
-        ret['comment'] = e
+        ret['comment'] = repr(e)
         return ret
