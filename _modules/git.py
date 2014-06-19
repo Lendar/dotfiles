@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
 '''
+Copied from salt 2014.1.3
+
+- Fix quoting problem in git.clone
+  https://github.com/Lendar/salt/commit/89dba738338cbde0d62ab2e1558a3d28414e0c7b
+
 Support for the Git SCM
 '''
 
@@ -188,7 +193,7 @@ def clone(cwd, repository, opts=None, user=None, identity=None):
 
     if not opts:
         opts = ''
-    cmd = 'git clone {0} {1} {2}'.format(repository, cwd, opts)
+    cmd = 'git clone {0} {1!r} {2}'.format(repository, cwd, opts)
 
     return _git_run(cmd, runas=user, identity=identity)
 

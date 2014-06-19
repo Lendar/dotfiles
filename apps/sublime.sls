@@ -20,8 +20,7 @@ sublime-{{name}}:
   git.latest:
     - name: git://github.com/{{package}}.git
     - rev: {{rev}}
-    - target: "\"{{grains['home']}}/Library/Application Support/Sublime Text 2/Packages/{{name}}\""
-    # FIXME: workaround for salt 2014.1.3 issue
+    - target: {{grains['home']}}/Library/Application Support/Sublime Text 2/Packages/{{name}}
     - unless: ls '{{grains['home']}}/Library/Application Support/Sublime Text 2/Packages/{{name}}'
     - require:
       - cmd: salt://apps/sublime.sh
