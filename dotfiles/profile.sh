@@ -53,7 +53,7 @@ alias salt="salt -c ~/.salt"
 
 # projects
 function project() {
-    source ~/projects/salt/iterm2_helpers.sh
+    source ~/.iterm2_helpers.sh
     export DISABLE_AUTO_TITLE="true"
     tab_green "🐔 $1"
     export HISTFILE=~/.history-$1

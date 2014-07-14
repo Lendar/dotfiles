@@ -4,6 +4,9 @@ encfs:
 {{grains['home']}}/.profile:
   file.managed:
     - source: salt://dotfiles/profile.sh
+{{grains['home']}}/.iterm2_helpers.sh:
+  file.managed:
+    - source: salt://dotfiles/iterm2_helpers.sh
 {{grains['home']}}/.gemrc:
   file.managed:
     - source: salt://dotfiles/gemrc
