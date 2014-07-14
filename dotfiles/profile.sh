@@ -41,7 +41,6 @@ alias terminal-notifier='~/bin/terminal-notifier.app/Contents/MacOS/terminal-not
 
 # export JAVA_HOME="$(/usr/libexec/java_home)"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
-source ~/iknow-aws.sh
 
 # salt
 alias salt-call="salt-call --local -c ~/.salt"
