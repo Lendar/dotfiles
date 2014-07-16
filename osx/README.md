@@ -66,3 +66,28 @@ curl get.pow.cx | sh
 ```
 
 3. Append to /etc/hosts: `127.0.0.1 localhost.iknow.travel`
+
+Permissions
+-----------
+
+Run regularly:
+
+    sudo chmod -R g+rw /Library/Caches/Homebrew
+    sudo chmod -R g+rw /usr/local
+
+Cask
+----
+
+Run once:
+
+    sudo mkdir -p /opt/homebrew-cask/Caskroom
+    chown -R lendar:admin /opt
+    chmod -R g+w /opt
+
+
+Dock
+----
+
+Run once, then reboot:
+
+    salt-call plist_dock.remove_dock_app 'com.apple.*'
