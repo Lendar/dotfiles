@@ -1,7 +1,6 @@
-cask:
-  cmd.run:
-    - name: brew tap caskroom/cask
-    - unless: brew tap | grep 'caskroom/cask'
+brew-cask:
+  pkg.installed:
+    - taps: caskroom/cask
 
 {% set packages = [
   'totalterminal'
@@ -12,5 +11,5 @@ cask-{{package}}:
     - name: brew cask install {{package}}
     - onlyif: brew cask info {{package}} | grep 'Not installed'
     - require:
-      - cmd: cask
+      - pkg: brew-cask
 {% endfor %}
