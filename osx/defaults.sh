@@ -11,8 +11,8 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate. N.B.: KeyRemap4MacBook overrides both.
 # 1 = 15 ms, minimal value is 1
-defaults write NSGlobalDomain KeyRepeat -int 30
-defaults write NSGlobalDomain InitialKeyRepeat -int 7
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
