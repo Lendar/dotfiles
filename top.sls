@@ -11,5 +11,6 @@ base:
     - apps.alfred
     - apps.dropbox
     - apps.iterm2
+    - cask
     - avocado
     - python
