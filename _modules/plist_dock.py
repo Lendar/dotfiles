@@ -1,3 +1,5 @@
+import fnmatch
+
 PLIST_NAME = 'com.apple.dock'
 
 
