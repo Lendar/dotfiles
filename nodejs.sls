@@ -1,4 +1,4 @@
-nodejs:
+node:
   pkg:
     - installed
 npm-packages:
