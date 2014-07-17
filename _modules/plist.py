@@ -1,6 +1,5 @@
 import os
 import plistlib
-import fnmatch
 
 try:
     plistlib.readPlistFromString
