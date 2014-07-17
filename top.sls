@@ -14,3 +14,4 @@ base:
     - cask
     - avocado
     - python
+    - pip
