@@ -30,6 +30,9 @@ encfs:
   file.symlink:
     - target: {{grains['home']}}/Dropbox/.home/.ssh/id_rsa.pub
     - makedirs: true
+{{grains['home']}}/env:
+  file.symlink:
+    - target: {{grains['home']}}/Dropbox/.home/env
 {{grains['home']}}/bin/subl:
   file.symlink:
     - target: /Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl
