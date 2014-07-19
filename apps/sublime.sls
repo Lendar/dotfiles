@@ -5,6 +5,7 @@ salt://apps/sublime.sh:
 
 {% set packages = {
   'Projects': 'Lendar/sublime-projects',
+  'Theme - Soda': 'buymeasoda/soda-theme',
   'Js2coffee': 'Lendar/sublime-js2coffee#fix-paths',
   'Jade': 'Intervox/jade-tmbundle#cat-syntax',
   'CoffeeScript': 'jashkenas/coffee-script-tmbundle'
