@@ -55,3 +55,8 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # Show library
 chflags nohidden ~/Library
+
+# Date format
+# EEE d MMM  HH:mm = Sun 20 Jul  13:15
+# Reference http://www.unicode.org/reports/tr35/tr35-25.html#Date_Format_Patterns
+defaults write com.apple.menuextra.clock DateFormat "EEE d MMM  HH:mm"
