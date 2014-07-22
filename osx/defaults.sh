@@ -63,3 +63,17 @@ defaults write com.apple.menuextra.clock DateFormat "EEE d MMM  HH:mm"
 
 # Show fast user switching menu as: Account Name
 defaults write -g userMenuExtraStyle -int 1
+
+# Hide Bluetooth menu
+defaults write com.apple.systemuiserver menuExtras -array \
+    "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+    "/System/Library/CoreServices/Menu Extras/Volume.menu" \
+    "/System/Library/CoreServices/Menu Extras/TextInput.menu" \
+    "/System/Library/CoreServices/Menu Extras/Battery.menu" \
+    "/System/Library/CoreServices/Menu Extras/Clock.menu" \
+    "/System/Library/CoreServices/Menu Extras/User.menu"
+# Hidden:
+#   "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
+
+# Apply changes
+killall SystemUIServer -HUP
