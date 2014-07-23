@@ -3,6 +3,7 @@ base:
     - dotfiles
     - projects
     - plist
+    - salt.logs
   primary:
     - match: nodegroup
     - apps.chrome
