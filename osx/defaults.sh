@@ -64,6 +64,7 @@ defaults write com.apple.menuextra.clock DateFormat "EEE d MMM  HH:mm"
 # Show fast user switching menu as: Account Name
 defaults write -g userMenuExtraStyle -int 1
 
+{% if not grains.get('keep_original_menu_extras', False) %}
 # Hide Bluetooth menu
 defaults write com.apple.systemuiserver menuExtras -array \
     "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
@@ -74,6 +75,7 @@ defaults write com.apple.systemuiserver menuExtras -array \
     "/System/Library/CoreServices/Menu Extras/User.menu"
 # Hidden:
 #   "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
+{% endif %}
 
 # Apply changes
 killall SystemUIServer -HUP

@@ -55,4 +55,5 @@ sublime-config:
 osx-defaults-script:
   cmd.script:
     - source: salt://osx/defaults.sh
+    - template: jinja
 
