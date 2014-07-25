@@ -97,6 +97,7 @@ if type compdef &>/dev/null; then
         compadd `ls ~/projects`
     }
     compdef _project_complete project
+    compdef _project_complete archive-project
 fi
 
 doge
