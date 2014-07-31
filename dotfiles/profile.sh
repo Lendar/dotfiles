@@ -64,6 +64,16 @@ function project() {
     if [[ -f "$env_script" && -r "$env_script" ]]; then
         source $env_script
     fi
+    projectfile="$HOME/Dropbox/dev/sublime/$1.sublime-project"
+    if [ -e $projectfile ]; then
+        echo 'Opening sublime in background...'
+        subl -n -b --project $projectfile
+    fi
+    projectfile="$HOME/Dropbox/Library/Application Support/Sublime Text 2/Packages/$1.sublime-project"
+    if [ -e $projectfile ]; then
+        echo 'Opening sublime in background...'
+        subl -n -b --project $projectfile
+    fi
 }
 function task() {
     taskid=$1
