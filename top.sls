@@ -13,6 +13,7 @@ base:
     - apps.dropbox
     - apps.iterm2
     - cask
+    - logs
     - avocado
     - python
     - pip
