@@ -4,6 +4,7 @@ salt://apps/sublime.sh:
     - cwd: {{grains['home']}}
 
 {% set packages = {
+  'PlainTasks': 'aziz/PlainTasks',
   'Projects': 'Lendar/sublime-projects',
   'Theme - Soda': 'buymeasoda/soda-theme',
   'Js2coffee': 'Lendar/sublime-js2coffee#fix-paths',
