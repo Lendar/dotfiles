@@ -1,17 +1,9 @@
 include:
   - nodejs
 redis:
-  pkg:
-    - installed
+  pkg.installed
 mongodb:
-  pkg:
-    - installed
-fabric:
-  pip.installed
-cuisine:
-  pip.installed
-boto:
-  pip.installed
+  pkg.installed
 graphicsmagick:
   pkg.installed
 {{grains['home']}}/.pow/localhost.iknow:

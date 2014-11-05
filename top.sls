@@ -14,6 +14,6 @@ base:
     - apps.iterm2
     - cask
     - logs
-    - avocado
+    - berry
     - python
     - pip
