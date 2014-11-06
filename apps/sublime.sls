@@ -30,4 +30,6 @@ sublime-{{name}}:
 {% endfor %}
 
 js2coffee:
-  npm.installed
+  npm.installed:
+    - require:
+      - pkg: node
