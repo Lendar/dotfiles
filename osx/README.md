@@ -81,7 +81,7 @@ Cask
 Run once:
 
     sudo mkdir -p /opt/homebrew-cask/Caskroom
-    chown -R lendar:admin /opt
+    sudo chown -R $USER:admin /opt
     chmod -R g+w /opt
 
 
