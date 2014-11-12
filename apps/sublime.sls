@@ -4,6 +4,7 @@ salt://apps/sublime.sh:
     - cwd: {{grains['home']}}
 
 {% set packages = {
+  'Package Control': 'wbond/package_control',
   'PlainTasks': 'aziz/PlainTasks',
   'Projects': 'Lendar/sublime-projects',
   'Theme - Soda': 'buymeasoda/soda-theme',
