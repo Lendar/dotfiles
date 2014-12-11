@@ -53,6 +53,9 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
+# Enable the Develop menu and the Web Inspector in Safari
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+
 # Show library
 chflags nohidden ~/Library
 
