@@ -44,6 +44,7 @@ export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 
 # salt
 alias salt-call="salt-call --local -c ~/.salt"
+alias salt-cloud="salt-cloud -c ~/.salt"
 alias salt-master="salt-master -c ~/.salt"
 alias salt-key="salt-key -c ~/.salt"
 alias salt-minion="salt-minion -c ~/.salt"
