@@ -1,5 +1,6 @@
 base:
   '*':
+    - cask
     - dotfiles
     - projects
     - plist
@@ -12,7 +13,6 @@ base:
     - apps.alfred
     - apps.dropbox
     - apps.iterm2
-    - cask
     - logs
     - berry
     - python
