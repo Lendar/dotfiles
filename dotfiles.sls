@@ -14,9 +14,6 @@ encfs:
   file.managed:
     - source: salt://dotfiles/gitconfig
     - template: jinja
-{{grains['home']}}/.npmrc:
-  file.managed:
-    - source: salt://dotfiles/npmrc
 {{grains['home']}}/.ssh/config:
   file.symlink:
     - target: {{grains['home']}}/Dropbox/.home/.ssh/config
