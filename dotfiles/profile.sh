@@ -1,4 +1,4 @@
-export PATH=/usr/local/share/python:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:"/Applications/Android Studio.app/sdk/platform-tools":~/node_modules/.bin:/usr/local/share/npm/bin:~/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH
+export PATH=/usr/local/share/python:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:"/Applications/Android Studio.app/sdk/platform-tools":~/node_modules/.bin:/usr/local/share/npm/bin:~/bin:/usr/local/opt/coreutils/libexec/gnubin:~/Library/Android/sdk/platform-tools:$PATH
 export HISTCONTROL=ignoreboth
 export HISTSIZE=50000
 export HISTIGNORE="&:l:vdir:[bf]g:exit"
