@@ -5,6 +5,8 @@ export HISTIGNORE="&:l:vdir:[bf]g:exit"
 export NODE_PATH=/usr/local/bin:/usr/local/share/npm/lib/node_modules:$NODE_PATH
 #FSHARP_COMPILER_BIN="/Library/Frameworks/Mono.framework/Versions/Current/lib/fsharp/bin"
 export PYTHONPATH=/usr/bin/:/usr/local/lib/python2.7/site-packages:/usr/local/lib/python:$PYTHONPATH
+export LANG="en_US"
+export LC_ALL=$LANG.UTF-8
 
 # Set pbcopy to use UTF-8 by default
 export __CF_USER_TEXT_ENCODING=0x1F5:0x8000100:0x8000100
