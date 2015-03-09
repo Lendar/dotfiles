@@ -9,6 +9,8 @@ disable-mission-control-hotkeys:
       - '37'
       - '62'
       - '63'
+      - '64'
+      - '65'
       - '79'
       - '80'
       - '81'
