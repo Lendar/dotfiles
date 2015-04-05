@@ -38,12 +38,11 @@ def dump_xml(obj):
 
 
 def _normalize_path(name):
-    # TODO: try to resolve path
-    #   path = os.path.expanduser('~/Library/Preferences/com.apple.dock.plist')
     if '/' not in name:
         name = os.path.join(OSX_PREFS, name)
     if not name.endswith('.plist'):
         name = name + '.plist'
+    name = os.path.expanduser(name)
     return name
 
 
