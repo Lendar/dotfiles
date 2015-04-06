@@ -13,6 +13,7 @@ base:
     - apps.alfred
     - apps.dropbox
     - apps.iterm2
+    - encfs
     - logs
     - berry
     - python

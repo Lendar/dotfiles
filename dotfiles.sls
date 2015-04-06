@@ -1,6 +1,3 @@
-encfs:
-  pkg:
-    - installed
 {{grains['home']}}/.profile:
   file.managed:
     - source: salt://dotfiles/profile.sh

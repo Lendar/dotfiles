@@ -1,0 +1,3 @@
+encfs:
+  pkg:
+    - installed
