@@ -1,10 +1,15 @@
-export PATH=/usr/local/share/python:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:"/Applications/Android Studio.app/sdk/platform-tools":~/node_modules/.bin:/usr/local/share/npm/bin:~/bin:/usr/local/opt/coreutils/libexec/gnubin:~/Library/Android/sdk/platform-tools:$PATH
+export PATH=/usr/local/share/python:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:~/node_modules/.bin:/usr/local/share/npm/bin:~/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export HISTCONTROL=ignoreboth
 export HISTSIZE=50000
 export HISTIGNORE="&:l:vdir:[bf]g:exit"
 export NODE_PATH=/usr/local/bin:/usr/local/share/npm/lib/node_modules:$NODE_PATH
 #FSHARP_COMPILER_BIN="/Library/Frameworks/Mono.framework/Versions/Current/lib/fsharp/bin"
 export PYTHONPATH=/usr/bin/:/usr/local/lib/python2.7/site-packages:/usr/local/lib/python:$PYTHONPATH
+
+# Android Profile
+export PATH=$PATH:~/Library/Android/sdk/platform-tools:~/Library/Android/sdk/tools
+export ANDROID_HOME=~/Library/Android/sdk
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ANDROID_HOME/tools/lib
 export LANG="en_US"
 export LC_ALL=$LANG.UTF-8
 
