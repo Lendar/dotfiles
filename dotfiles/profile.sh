@@ -103,8 +103,8 @@ function task() {
 
 function archive-project() {
     project $1
-    echo "Warning: remote branches are ignored."
     git fetch
+    echo "Archiving... To restore use: git clone --mirror"
     git bundle create ../$project.git.bundle --all
     zip ~/secure/archive/$project.git.bundle.zip ../$project.git.bundle
 }
