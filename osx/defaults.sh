@@ -80,5 +80,8 @@ defaults write com.apple.systemuiserver menuExtras -array \
 #   "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
 {% endif %}
 
+# Turn off autosave for Sketch
+defaults write $(osascript -e 'id of application "Sketch"') ApplePersistence -bool no
+
 # Apply changes
 killall SystemUIServer -HUP
