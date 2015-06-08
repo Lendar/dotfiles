@@ -64,6 +64,9 @@ chflags nohidden ~/Library
 # Reference http://www.unicode.org/reports/tr35/tr35-25.html#Date_Format_Patterns
 defaults write com.apple.menuextra.clock DateFormat "EEE d MMM  HH:mm"
 
+# ISO8601 for short date format
+defaults write NSGlobalDomain AppleICUDateFormatStrings -dict-add "1" "yyyy-MM-dd"
+
 # Show fast user switching menu as: Account Name
 defaults write -g userMenuExtraStyle -int 1
 
