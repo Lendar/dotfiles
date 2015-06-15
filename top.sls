@@ -5,6 +5,7 @@ base:
     - projects
     - plist
     - salt.logs
+    - npm-config
   primary:
     - match: nodegroup
     - apps.chrome
