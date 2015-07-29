@@ -18,7 +18,6 @@ export __CF_USER_TEXT_ENCODING=0x1F5:0x8000100:0x8000100
 export EDITOR='subl -w'
 # export EDITOR="open -a /Applications/Emacs.app";export EDITOR
 
-alias nginx='sudo nginx -s reload'
 export nginx_conf='/usr/local/etc/nginx/nginx.conf'
 
 # network
@@ -41,7 +40,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 # TODO: export PS1="\u@\h:\w\n$ "
 
-alias nginx='sudo killall nginx && sudo launchctl load -w /Library/LaunchAgents/org.nginx.plist'
 alias edit-nginx='subl $nginx_conf'
 alias terminal-notifier='~/bin/terminal-notifier.app/Contents/MacOS/terminal-notifier'
 
