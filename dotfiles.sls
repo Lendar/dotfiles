@@ -16,13 +16,15 @@
     - target: {{grains['home']}}/Dropbox/.home/.ssh/config
     - makedirs: true
 {{grains['home']}}/.ssh/id_rsa:
-  file.symlink:
-    - target: {{grains['home']}}/Dropbox/.home/.ssh/id_rsa
+  file.copy:
+    - source: {{grains['home']}}/Dropbox/.home/.ssh/id_rsa
+    - force: true
     - makedirs: true
     - mode: 600
 {{grains['home']}}/.ssh/id_rsa.pub:
-  file.symlink:
-    - target: {{grains['home']}}/Dropbox/.home/.ssh/id_rsa.pub
+  file.copy:
+    - source: {{grains['home']}}/Dropbox/.home/.ssh/id_rsa.pub
+    - force: true
     - makedirs: true
 {{grains['home']}}/env:
   file.symlink:
