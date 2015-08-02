@@ -72,8 +72,8 @@ Permissions
 
 Run regularly:
 
-    sudo chmod -R g+rw /Library/Caches/Homebrew
-    sudo chmod -R g+rw /usr/local
+    sudo chgrp -R admin /usr/local /Library/Caches/Homebrew
+    sudo chmod -R g+rw /usr/local /Library/Caches/Homebrew
 
 Cask
 ----
