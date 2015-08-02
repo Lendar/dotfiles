@@ -17,6 +17,9 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Add English + Russian Keyboard Layout
+defaults write com.apple.HIToolbox AppleEnabledInputSources -array '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>0</integer><key>KeyboardLayout Name</key><string>U.S.</string></dict>' '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>19967</integer><key>KeyboardLayout Name</key><string>Russian-BG46</string></dict>'
+
 # Enable tap to click on a Magic Trackpad
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 # Enable tap to click for the active user

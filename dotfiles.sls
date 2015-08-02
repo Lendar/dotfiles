@@ -31,8 +31,9 @@
   file.symlink:
     - target: /Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl
     - makedirs: true
-"{{grains['home']}}/Library/Keyboard Layouts":
+dotfiles-keyboard-layouts:
   file.recurse:
+    - name: "{{grains['home']}}/Library/Keyboard Layouts"
     - source: "salt://dotfiles/Keyboard Layouts"
 zsh:
   git.latest:
@@ -50,4 +51,6 @@ osx-defaults-script:
   cmd.script:
     - source: salt://osx/defaults.sh
     - template: jinja
+    - require:
+      - file: dotfiles-keyboard-layouts
 
