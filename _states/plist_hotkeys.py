@@ -7,7 +7,7 @@ def disable_hotkey(name):
     }
     try:
         enabled = __salt__['plist_hotkeys.is_hotkey_enabled'](name)
-        if enabled:
+        if enabled != False:
             ret['changes'][name] = 'disabled'
             if __opts__['test']:
                 ret['result'] = None
