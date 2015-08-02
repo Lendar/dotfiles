@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 # Copied from https://raw.githubusercontent.com/saltstack/salt/v2015.5.3/salt/modules/brew.py
+# Modifications:
+#
+# - disable runas. Fixes "Operation not permitted" error.
 '''
 Homebrew for Mac OS X
 '''
@@ -46,7 +49,7 @@ def _tap(tap, runas=None):
         return True
 
     cmd = 'brew tap {0}'.format(tap)
-    if __salt__['cmd.retcode'](cmd, python_shell=False, runas=runas):
+    if __salt__['cmd.retcode'](cmd, python_shell=False):
         log.error('Failed to tap "{0}"'.format(tap))
         return False
 
@@ -68,7 +71,6 @@ def _call_brew(cmd):
     '''
     user = __salt__['file.get_user'](_homebrew_bin())
     return __salt__['cmd.run_all'](cmd,
-                                   runas=user,
                                    output_loglevel='trace',
                                    python_shell=False)
 
