@@ -2,5 +2,5 @@ if [ -d "/Applications/iTerm.app" ]; then
     echo "Already installed!"
     exit 0
 fi
-curl -fsSL http://www.iterm2.com/downloads/stable/iTerm2_v1_0_0.zip > iTerm2_v1_0_0.zip
-unzip -q iTerm2_v1_0_0.zip -d /Applications
+curl -fsSL https://iterm2.com/downloads/beta/iTerm2-2_9_20150626.zip > iTerm2.zip
+unzip -q iTerm2.zip -d /Applications
