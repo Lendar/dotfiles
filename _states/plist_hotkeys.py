@@ -1,3 +1,27 @@
+def enable_hotkey(name):
+    ret = {
+        'name': name,
+        'changes': {},
+        'result': True,
+        'comment': ''
+    }
+    try:
+        enabled = __salt__['plist_hotkeys.is_hotkey_enabled'](name)
+        if enabled != True:
+            ret['changes'][name] = 'enabled'
+            if __opts__['test']:
+                ret['result'] = None
+                ret['comment'] = 'Would enable hotkey #{0}'.format(name)
+            else:
+                ret['comment'] = 'enabled hotkey #{0}'.format(name)
+                __salt__['plist_hotkeys.enable_hotkey'](name)
+        return ret
+    except Exception as e:
+        ret['result'] = False
+        ret['comment'] = repr(e)
+        return ret
+
+
 def disable_hotkey(name):
     ret = {
         'name': name,

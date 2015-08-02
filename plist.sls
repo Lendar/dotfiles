@@ -1,4 +1,11 @@
-disable-mission-control-hotkeys:
+disable-hotkeys:
+  plist_hotkeys.disable_hotkey:
+    - names:
+
+      # Select the previous input source
+      - '61'
+
+enable-hotkeys:
   plist_hotkeys.disable_hotkey:
     - names:
       - '32'
@@ -9,8 +16,13 @@ disable-mission-control-hotkeys:
       - '37'
       - '62'
       - '63'
+
+      # Show Spotlight search field
       - '64'
+
+      # Show Spotlight window
       - '65'
+
       - '79'
       - '80'
       - '81'
