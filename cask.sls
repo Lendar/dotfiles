@@ -4,6 +4,7 @@ brew-cask:
 
 {% set packages = [
   'omnifocus',
+  'osxfuse',
   'sketch',
   'totalterminal'
 ] %}

@@ -23,7 +23,7 @@ export nginx_conf='/usr/local/etc/nginx/nginx.conf'
 # network
 # TODO: complete -W "$(egrep "^[^#]*(Host )([^*]*)$" ~/.ssh/config|sort -u)" ssh
 mkdir -p ~/secure
-alias mntsec='encfs ~/Dropbox/.secure-data ~/secure -ovolname=secure && chmod 0600 ~/secure/*.pem'
+alias mntsec='encfs ~/Dropbox/.secure-data ~/secure -ovolname=secure && sleep 2 && chmod 0600 ~/secure/*.pem'
 
 # DEPRECATED
 alias mntapp='sshfs ec2-user@$appsrv: ~/remote-appsrv -ovolname=appsrv'
