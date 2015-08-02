@@ -1,13 +1,14 @@
 base:
   '*':
+    # for current user
     - cask
     - dotfiles
     - projects
     - plist
     - salt.logs
     - npm-config
-  primary:
-    - match: nodegroup
+
+    # for all users
     - apps.chrome
     - apps.chrome-canary
     - apps.sublime
