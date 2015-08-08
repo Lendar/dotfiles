@@ -1,4 +1,4 @@
-export PATH=/usr/local/share/python:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:~/node_modules/.bin:~/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH
+export PATH=/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:~/node_modules/.bin:~/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export HISTCONTROL=ignoreboth
 export HISTSIZE=50000
 export HISTIGNORE="&:l:vdir:[bf]g:exit"
