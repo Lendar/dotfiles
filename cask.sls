@@ -3,6 +3,7 @@ brew-cask:
     - taps: caskroom/cask
 
 {% set packages = [
+  'keepassx',
   'omnifocus',
   'osxfuse',
   'sketch',
