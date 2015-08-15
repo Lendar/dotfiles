@@ -3,4 +3,4 @@ encfs:
     - name: encfs
     - taps: homebrew/fuse
     - require:
-      - cask-osxfuse
+      - cmd: cask-osxfuse
