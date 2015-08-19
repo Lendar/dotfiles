@@ -4,6 +4,7 @@ brew-cask:
 
 {% set packages = [
   'keepassx',
+  'nvalt',
   'omnifocus',
   'osxfuse',
   'sketch',
