@@ -7,8 +7,7 @@ brew-cask:
   'nvalt',
   'omnifocus',
   'osxfuse',
-  'sketch',
-  'totalterminal'
+  'sketch'
 ] %}
 {% for package in packages %}
 cask-{{package}}:
