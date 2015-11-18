@@ -3,6 +3,7 @@ brew-cask:
     - taps: caskroom/cask
 
 {% set packages = [
+  'flowdock',
   'gitup',
   'keepassx',
   'nvalt',
