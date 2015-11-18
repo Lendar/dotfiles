@@ -58,13 +58,27 @@ alias salt="salt -c ~/.salt"
 # projects
 function project() {
     source ~/.iterm2_helpers.sh
+    export project="$1"
     export DISABLE_AUTO_TITLE="true"
     tab_green "🐔 $1"
+    project_folder="$HOME/projects/$project"
+    if [ ! -d "$project_folder" ]; then
+        read -q "REPLY?Create project $project? (y/n)" || return
+        echo
+        mkdir -p "$project_folder"
+        echo "Created $project_folder"
+        mkdir -p "$project_folder/.git"
+        master_settings="$HOME/Dropbox/scotty/raven"
+        cp -v "$master_settings/gitconfig/$project" "$project_folder/.git/config"
+        cp -v "$master_settings/history/.history-$project" ~/
+        cd "$project_folder"
+        git init .
+        echo "Created project"
+    fi
     export HISTFILE=~/.history-$1
     touch $HISTFILE
     fc -R
-    cd ~/projects/$1
-    export project="$1"
+    cd "$project_folder"
     env_script="$HOME/env/$1.zsh"
     if [[ -f "$env_script" && -r "$env_script" ]]; then
         source $env_script
