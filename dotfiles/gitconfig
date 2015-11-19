@@ -34,3 +34,5 @@
 [user]
     name = {{ pillar['name'] }}
     email = {{ pillar['email'] }}
+[core]
+    excludesfile = {{ grains['home'] }}/.gitignore_global
