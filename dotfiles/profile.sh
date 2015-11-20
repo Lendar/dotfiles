@@ -88,7 +88,7 @@ function project() {
         echo 'Opening sublime in background...'
         subl -n -b --project $projectfile
     fi
-    projectfile="$HOME/Dropbox/Library/Application Support/Sublime Text 2/Packages/$1.sublime-project"
+    projectfile="$HOME/Dropbox/Library/Application Support/Sublime Text 2/Projects/$1.sublime-project"
     if [ -e $projectfile ]; then
         echo 'Opening sublime in background...'
         subl -n -b --project $projectfile
