@@ -43,20 +43,21 @@ def write_minion_launchctl():
 '''.format(user=USER, banner=BANNER))
 
 
-def write_minion_cfg(id):
+def write_minion_cfg(id, master):
     try: os.makedirs(HOME + '/.salt')
     except: pass
     with open(HOME + '/.salt/minion', 'w') as f:
         f.write('''# {banner}
 id: {id}-{user}
 user: {user}
-master: 'lendar-macbook.local'
+master: {master}
 root_dir: /Users/{user}/.salt
 pidfile: /Users/{user}/.salt/var/run/salt-minion.pid
 file_roots:
   base:
     - /Users/{user}/.salt/srv/base'''.format(
         id=id,
+        master=master,
         banner=BANNER,
         user=USER))
 
@@ -69,14 +70,15 @@ def start_salt():
 
 
 def main():
-    if len(sys.argv) < 2:
-        print 'Usage: {0} <machine id>\n'.format(sys.argv[0])
+    if len(sys.argv) < 3:
+        print 'Usage: {0} <machine id> <master server>\n'.format(sys.argv[0])
         return
     else:
         id = sys.argv[1]
+        master = sys.argv[2]
     print 'Installing salt for machine {0}'.format(id)
     write_minion_launchctl()
-    write_minion_cfg(id)
+    write_minion_cfg(id, master)
     start_salt()
 
 

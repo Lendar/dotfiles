@@ -15,13 +15,9 @@ osx/bootstrap.sh
 
 ### Step 2: config
 
-TODO: remake script with masterless in mind
-
 ```
-~/.salt/srv/salt/osx/install-salt.py <name>
+~/.salt/srv/salt/osx/install-salt.py <name> your.salt.server
 ```
-
-goal: ~/.salt/minion
 
 ### Step 3: run
 
