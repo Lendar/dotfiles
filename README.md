@@ -3,17 +3,25 @@
 
 ### Step 1: clone
 
+```bash
 git clone https://github.com/Lendar/dotfiles.git ~/.salt/srv/salt
+```
 
+### Step 2: bootstrap saltstack (optional)
+
+```bash
+osx/bootstrap.sh
+```
 
 ### Step 2: config
 
 TODO: remake script with masterless in mind
 
-osx/install-salt.py <name>
+```
+~/.salt/srv/salt/osx/install-salt.py <name>
+```
 
 goal: ~/.salt/minion
-
 
 ### Step 3: run
 
