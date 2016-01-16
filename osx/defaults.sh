@@ -92,5 +92,8 @@ defaults write com.apple.systemuiserver menuExtras -array \
 # Turn off autosave for Sketch
 defaults write $(osascript -e 'id of application "Sketch"') ApplePersistence -bool no
 
+# Enable SVG compression for Sketch
+defaults write com.bohemiancoding.sketch3 exportCompactSVG -bool yes
+
 # Apply changes
 killall SystemUIServer -HUP
