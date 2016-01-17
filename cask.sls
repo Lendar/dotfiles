@@ -8,6 +8,7 @@
   'omnifocus',
   'osxfuse',
   'sketch',
+  'skype',
   'slack',
   'telegram'
 ] %}
