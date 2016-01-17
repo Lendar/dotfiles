@@ -29,10 +29,6 @@
 {{grains['home']}}/env:
   file.symlink:
     - target: {{grains['home']}}/Dropbox/.home/env
-{{grains['home']}}/bin/subl:
-  file.symlink:
-    - target: /Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl
-    - makedirs: true
 dotfiles-keyboard-layouts:
   file.recurse:
     - name: "{{grains['home']}}/Library/Keyboard Layouts"
