@@ -11,7 +11,17 @@ def _match_glob(s, patterns):
 
 
 def remove_dock_app(names):
-    "Example usage: remove_dock_app('com.apple.*')"
+    '''
+    Removes icons from the dock.
+
+    Supports globs (fnmatch).
+
+    Example usage:
+
+        salt-call plist_dock.remove_dock_app 'com.apple.*'
+        killall Dock
+
+    '''
     if isinstance(names, basestring):
         names = [names]
     print names
