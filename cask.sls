@@ -1,4 +1,5 @@
 {% set packages = [
+  'alfred',
   'flowdock',
   'gitup',
   'keepassx',

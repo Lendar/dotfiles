@@ -12,7 +12,6 @@ base:
     - apps.chrome
     - apps.chrome-canary
     - apps.sublime
-    - apps.alfred
     - apps.dropbox
     - apps.iterm2
     - encfs
