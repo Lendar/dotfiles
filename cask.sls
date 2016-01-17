@@ -7,7 +7,9 @@
   'nvalt',
   'omnifocus',
   'osxfuse',
-  'sketch'
+  'sketch',
+  'slack',
+  'telegram'
 ] %}
 {% for package in packages %}
 cask-{{package}}:
