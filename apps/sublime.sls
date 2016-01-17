@@ -1,7 +1,14 @@
-salt://apps/sublime.sh:
-  cmd:
-    - script
-    - cwd: {{grains['home']}}
+cask-tap-versions:
+  pkg.installed:
+    - pkgs: []
+    - taps: caskroom/versions
+
+sublime-app:
+  cmd.run:
+    - name: brew cask install sublime-text3
+    - onlyif: brew cask info sublime-text3 | grep 'Not installed'
+    - require:
+      - pkg: cask-tap-versions
 
 {% set packages = {
   'Package Control': 'wbond/package_control',
@@ -24,10 +31,10 @@ sublime-{{name}}:
   git.latest:
     - name: git://github.com/{{package}}.git
     - rev: {{rev}}
-    - target: {{grains['home']}}/Library/Application Support/Sublime Text 2/Packages/{{name}}
-    - unless: ls '{{grains['home']}}/Library/Application Support/Sublime Text 2/Packages/{{name}}'
+    - target: {{grains['home']}}/Library/Application Support/Sublime Text 3/Packages/{{name}}
+    - unless: ls '{{grains['home']}}/Library/Application Support/Sublime Text 3/Packages/{{name}}'
     - require:
-      - cmd: salt://apps/sublime.sh
+      - cmd: sublime-app
 {% endfor %}
 
 js2coffee:
