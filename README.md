@@ -39,12 +39,6 @@ salt '*' state.highstate
 
 ### TODO
 
-include in bootstrap script:
-
-```
-chsh -s /bin/zsh
-```
-
 setup iterm:
 
 ```
