@@ -41,3 +41,15 @@ js2coffee:
   npm.installed:
     - require:
       - pkg: node
+
+sublime-2-config:
+  file.symlink:
+    - name: {{grains['home']}}/Library/Application Support/Sublime Text 2/Packages/User
+    - target: {{grains['home']}}/Dropbox/Library/Application Support/Sublime Text 2/Packages/User
+    - makedirs: true
+
+sublime-3-config:
+  file.symlink:
+    - name: {{grains['home']}}/Library/Application Support/Sublime Text 3/Packages/User
+    - target: {{grains['home']}}/Dropbox/Library/Application Support/Sublime Text 3/Packages/User
+    - makedirs: true
