@@ -120,6 +120,10 @@ function archive-project() {
     zip ~/secure/archive/$project.git.bundle.zip ../$project.git.bundle
 }
 
+function reload() {
+    . ~/env/$project.zsh
+}
+
 if type compdef &>/dev/null; then
     # ZSH-only
     _project_complete() {
