@@ -84,6 +84,7 @@ function project() {
         source $env_script
     fi
     projectfile="$HOME/Dropbox/dev/sublime/$1.sublime-project"
+    return
     if [ -e $projectfile ]; then
         echo 'Opening sublime in background...'
         subl -n -b --project $projectfile
@@ -140,7 +141,7 @@ function subl-project() {
 if type compdef &>/dev/null; then
     # ZSH-only
     _project_complete() {
-        compadd `ls ~/projects`
+        compadd `{ls ~/projects; ls ~/Dropbox/scotty/raven/gitconfig}`
     }
     compdef _project_complete project
     compdef _project_complete archive-project
