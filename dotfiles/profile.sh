@@ -75,7 +75,7 @@ function project() {
         git init .
         echo "Created project"
     fi
-    export HISTFILE=~/.history-$1
+    export HISTFILE=~/.history-$project
     touch $HISTFILE
     fc -R
     cd "$project_folder"
@@ -126,6 +126,10 @@ function reload() {
 
 function edit-profile() {
     subl ~/env/$project.zsh
+}
+
+function edit-history() {
+    subl ~/.history-$project
 }
 
 if type compdef &>/dev/null; then
