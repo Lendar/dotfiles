@@ -124,6 +124,10 @@ function reload() {
     . ~/env/$project.zsh
 }
 
+function edit-profile() {
+    subl ~/env/$project.zsh
+}
+
 if type compdef &>/dev/null; then
     # ZSH-only
     _project_complete() {
