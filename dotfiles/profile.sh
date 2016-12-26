@@ -133,6 +133,10 @@ function edit-history() {
     subl ~/.history-$project
 }
 
+function subl-project() {
+    subl -n -b --project $projectfile
+}
+
 if type compdef &>/dev/null; then
     # ZSH-only
     _project_complete() {
