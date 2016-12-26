@@ -121,6 +121,7 @@ function archive-project() {
 }
 
 function reload() {
+    . ~/.zshrc
     . ~/env/$project.zsh
 }
 
