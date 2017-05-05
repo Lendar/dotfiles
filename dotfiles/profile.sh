@@ -83,7 +83,7 @@ function project() {
         mkdir -p "$project_folder"
         echo "Created $project_folder"
         mkdir -p "$project_folder/.git"
-        master_settings="$HOME/Dropbox/scotty/raven"
+        master_settings="$HOME/Dropbox/scotty/blackbird"
         cp -v "$master_settings/gitconfig/$project" "$project_folder/.git/config"
         cp -v "$master_settings/history/.history-$project" ~/
         cd "$project_folder"
@@ -156,7 +156,7 @@ function subl-project() {
 if type compdef &>/dev/null; then
     # ZSH-only
     _project_complete() {
-        compadd `{ls ~/projects; ls ~/Dropbox/scotty/raven/gitconfig}`
+        compadd `{ls ~/projects; ls ~/Dropbox/scotty/blackbird/gitconfig}`
     }
     compdef _project_complete project
     compdef _project_complete archive-project
