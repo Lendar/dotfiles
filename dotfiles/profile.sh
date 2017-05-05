@@ -1,4 +1,17 @@
-export PATH=/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:~/node_modules/.bin:~/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH
+function git_prompt_info() {
+  local ref
+  if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
+    ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
+    ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
+    echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  fi
+}
+export PROMPT='%{$fg[gray]%} ${project-blackbird}$(git_prompt_info) %{$fg[red]%}%(!.#.▲)%{$reset_color%} '
+ZSH_THEME_GIT_PROMPT_PREFIX="%B%{$fg[gray]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+
+
+export PATH=/Users/lendar/bin:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:~/node_modules/.bin:~/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export HISTCONTROL=ignoreboth
 export HISTSIZE=50000
 export HISTIGNORE="&:l:vdir:[bf]g:exit"
@@ -60,6 +73,8 @@ function project() {
     source ~/.iterm2_helpers.sh
     export project="$1"
     export DISABLE_AUTO_TITLE="true"
+    # iterm integration
+    echo -e "\033]50;SetProfile=$1\a"
     tab_green "🐔 $1"
     project_folder="$HOME/projects/$project"
     if [ ! -d "$project_folder" ]; then
